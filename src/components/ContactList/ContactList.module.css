@@ -1,0 +1,6 @@
+.listOfContacts {
+  display: flex;
+  padding: 0;
+  gap: 20px;
+  flex-wrap: wrap;
+}
