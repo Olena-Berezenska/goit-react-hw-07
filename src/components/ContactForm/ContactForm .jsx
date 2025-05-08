@@ -4,14 +4,13 @@ import * as Yup from 'yup';
 import { nanoid } from 'nanoid';
 
 import styles from './ContactForm.module.css';
-import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from '../../redux/contactsSlice';
+import { useDispatch } from 'react-redux';
+import { addContact } from '../../redux/contactsOps';
 const ContactForm = () => {
   const dispatch = useDispatch();
 
   const HandleaddContact = data => {
     const newcontact = {
-      id: nanoid(),
       name: data.name,
       number: data.number,
     };
