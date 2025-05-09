@@ -9,12 +9,13 @@ import { addContact } from '../../redux/contactsOps';
 const ContactForm = () => {
   const dispatch = useDispatch();
 
-  const HandleaddContact = data => {
+  const HandleaddContact = (data, { resetForm }) => {
     const newcontact = {
       name: data.name,
       number: data.number,
     };
     dispatch(addContact(newcontact));
+    resetForm();
   };
 
   const validation = Yup.object().shape({
